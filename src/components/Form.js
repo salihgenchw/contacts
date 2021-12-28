@@ -19,17 +19,20 @@ const Form = () => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      Contacts:
-      <input value={name} onChange={(e) => setName(e.target.value)} />
+      <input
+        placeholder="Enter name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
       <br />
-      PhoneNumber:
-      {/* <input value={number} onChange={(e) => setNumber(e.target.value)} /> */}
       <PhoneInput
         placeholder="Enter phone number"
         value={number}
         onChange={setNumber}
       />
-      <button type="submit">Ekle</button>
+      <div className="btn">
+        <button type="submit">Ekle</button>
+      </div>
     </form>
   );
 };

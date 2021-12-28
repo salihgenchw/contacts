@@ -7,11 +7,11 @@ const ContactsList = () => {
   const contacts = useSelector(contactSelectors.selectAll);
 
   return (
-    <div>
-      {contacts.map((item) => (
-        <Item key={item.id} item={item}/>
+    <ul className="list">
+      {contacts.map((contact) => (
+        <Item key={contact.id} item={contact} />
       ))}
-    </div>
+    </ul>
   );
 };
 
